@@ -82,7 +82,7 @@ STATION_BIN="../../build-corecell-$variant/bin/station"
 if [ -f "$STATION_BIN" ]; then
 	printf "Using variant=$variant, lns_config='$lns_config'\n"
 	printf "$GREEN Starting Station ... $NC\n"
-	$STATION_BIN -h $lns_config
+	$STATION_BIN -h $lns_config --radio-init=./reset_lgw.sh
 else
 	printf "$RED [ERROR]: Binary not found @ $STATION_BIN $NC\n"
 fi
